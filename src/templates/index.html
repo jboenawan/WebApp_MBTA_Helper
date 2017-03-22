@@ -32,6 +32,16 @@
         color: #757474;
         }
 
+        #small {
+        font-size: 12pt;
+        }
+
+        body{
+        background-color:black;
+        }
+
+        
+
     </style>
 
 </head>
@@ -40,13 +50,16 @@
 <body>
 
 <div>
-<h3>Find MBTA Station Near You!</h3>
+<h3>Find an MBTA Station Near You!</h3>
 <form method="POST" name="calculator">
     {% if Error %}
     <p style='color:red'>Error: Please enter a different destination</p>
     {% endif %}
     <p>
         Enter a destination:
+    </p>
+    <p id="small">
+        e.g. "Wellesley"
     </p>
     <p>
         <input type="text" name='place_name'>
@@ -57,7 +70,23 @@
 </form>
 </div>
 
-
+ <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
 
 
 
