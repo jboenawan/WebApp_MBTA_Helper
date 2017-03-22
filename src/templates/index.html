@@ -28,18 +28,6 @@
         font-size: 15pt;
         }
 
-        a{
-        text-decoration: none
-        }
-
-        a:hover {
-        color: grey;
-        }
-        a:visited {
-        color: black;
-        }
-
-
         .descr {
         color: #757474;
         }
@@ -54,7 +42,7 @@
 <div>
 <h3>Find MBTA Station Near You!</h3>
 <form method="POST" name="calculator">
-    {% if error %}
+    {% if Error %}
     <p style='color:red'>Error: Please enter a different destination</p>
     {% endif %}
     <p>
