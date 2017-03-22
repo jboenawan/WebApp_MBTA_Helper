@@ -3,13 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <title>Amazing app to help you find nearest MBTA station</title>
+
+    <style type="text/css">
+        div{
+        position:relative;
+        margin-right:auto;
+        margin-left:auto;
+        padding-top: 50px;
+        }
+
+        h3,p{
+        text-align: center;
+        font-family:Calibri;
+        margin-left:auto;
+        margin-right:auto;
+        color:#aaaaaa;
+        }
+
+        h3 {
+        font-size: 20pt;
+        }
+
+        p {
+        font-size: 15pt;
+        }
+
+        a{
+        text-decoration: none
+        }
+
+        a:hover {
+        color: grey;
+        }
+        a:visited {
+        color: black;
+        }
+
+
+        .descr {
+        color: #757474;
+        }
+
+    </style>
+
 </head>
+
+
 <body>
 
-<h1>Find MBTA Station Near You!</h1>
+<div>
+<h3>Find MBTA Station Near You!</h3>
 <form method="POST" name="calculator">
     {% if error %}
-    <p style='color:darkred'>Error: Please enter a different destination</p>
+    <p style='color:red'>Error: Please enter a different destination</p>
     {% endif %}
     <p>
         Enter a destination:
@@ -21,6 +67,7 @@
         <input type="submit" value="Submit">
     </p>
 </form>
+</div>
 
 
 

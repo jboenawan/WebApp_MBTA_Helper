@@ -12,12 +12,9 @@ app = Flask(__name__)
 
 app.config['DEBUG'] = True
 
-@app.route('/')
-def hello_world():
-    return render_template('welcome.html')
 
 
-@app.route('/find/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def calculate():
     if request.method == 'POST':
         place_name = request.form['place_name']

@@ -2,36 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="mystyles.css" media="screen" />
+    <title>Result</title>
+    <link rel="stylesheet" href="animate.css/source/bouncing_entrances/bounceInLeft.css" media="screen" />
     <style type="text/css">
-        div#st{
-        margin: 300px 200px 35px 200px;
-        padding: 25px 20px 25px 20px;
+        div{
         position:relative;
-        background-color:red;
+        margin-right:auto;
+        margin-left:auto;
+        padding-top: 50px;
         }
-        h1,h2{
+
+        h3,p{
         text-align: center;
-        font-family:Arial;
+        font-family:Calibri;
         margin-left:auto;
         margin-right:auto;
+        color:#aaaaaa;
         }
+
+        h3 {
+        font-size: 20pt;
+        }
+
+        p {
+        font-size: 15pt;
+        }
+
         a{
         text-decoration: none
         }
 
+        a:hover {
+        color: grey;
+        }
+        a:visited {
+        color: black;
+        }
+
+        .descr {
+        color: #757474;
+        }
+
     </style>
+
+
 </head>
 <body>
-<div id="st">
-<h1>
-    The Nearest MBTA station
-    {{stop}}, {{distance}} miles away from you.
-</h1>
+<div>
+<h3  >
+    MBTA station:
+</h3>
+    <p class="descr">
+    {{stop}}
+        </p>
+    </br>
+<h3 >
+    Distance:
+</h3>
+<p class="descr">
+    {{distance}} miles away </br>
+    from you.
+</p>
+<hr width="70%">
+<h3><a href=http://127.0.0.1:5000/>Find another MBTA station near you</a>
+</h3>
 </div>
-<div id="link">
-<h2><a href=http://127.0.0.1:5000/find/>Find another MBTA station near you</a></h2></div>
+
 
 </body>
 </html>
